@@ -1,0 +1,32 @@
+<div class="db">
+  <div class="section">
+    <h3>section</h3>
+    <p>
+      Clicked <span class="color"> {{counter}} Times</span></p>
+    <button class="clickMe" (click)="incCounter()">Increase Counter</button>
+  </div>
+  <div class="section">
+    <h3>Two Way section</h3>
+    <p>
+      Phone is <span
+      class="color">{{phoneNumber || 'XXXXXXXX'}} </span>
+    </p>
+    <input type="number" name="numberInput" placeholder="Enter Phone Number" [(ngModel)]="phoneNumber"/>
+  </div>
+  <div class="section">
+    <h3>Split section</h3>
+    <p>Customer Name <span class="color">{{customerName || 'Name here '}} </span></p>
+    <input type="text" placeholder="Enter Customer Name" [ngModel]="customerName" (ngModelChange)="checkName($event)"/>
+  </div>
+  <div class="section">
+    <h3>Getters & Setters</h3>
+    <p>Business Name <span class="color">{{businessName || 'Name here '}} </span></p>
+    <input type="text" placeholder="Enter Customer Name" [(ngModel)]="businessName" />
+  </div>
+  <div class="section">
+    <h3>ChildView</h3>
+    <p>Project Name<span class="color"> {{projectName || 'Name here '}} </span></p>
+    <input type="text" placeholder="Enter Customer Name" #projectNameObj />
+  </div>
+
+</div>
