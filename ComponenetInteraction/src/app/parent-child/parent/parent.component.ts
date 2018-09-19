@@ -11,5 +11,7 @@ export class ParentComponent implements OnInit {
   EmployeeName: string;
   ngOnInit() {
   }
-
+  setEmployeeName(newName: srting) {
+    this.EmployeeName = newName;
+  }
 }

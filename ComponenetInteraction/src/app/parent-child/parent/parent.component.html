@@ -7,5 +7,12 @@
       <p>Value is <span class="color">{{EmployeeName || 'xxx'}}</span></p>
       <app-child [childValue]="EmployeeName"></app-child>
     </div>
+
+    <div class="section">
+      <h3>Using Template Ref</h3>
+      <p>Value is <span class="color">{{templateValue.name || 'xxx'}}</span></p>
+      <app-child #templateValue [childValue]="EmployeeName" (toParent)="setEmployeeName($event)"></app-child>
+
+    </div>
   </div>
 </div>
